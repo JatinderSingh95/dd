@@ -1,0 +1,59 @@
+<style>
+ul{
+padding:10px 20px;
+background-color:white;
+list-style:none;
+}
+
+
+div{
+height:100vh;
+
+
+}
+
+
+li{
+padding:4px 0;
+
+
+}
+
+
+ 
+
+</style>
+{% load staticfiles %}
+<body style="background-color:#BCF6F9;">
+<div style="float:left">
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+<script src="{% static 'js/tinymce/tinymce.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/tinymce/custom.js' %}" ></script>
+     
+	
+    
+
+    {{ form.as_p }}
+
+    <input type="submit" value="Submit" />
+</form>
+</div>
+<div style="float:right;background-color:white">
+<h2>A Platform for Inquisitive Ones</h2>
+<ul>
+<li>GATE Preparation</li>
+<li>Thermodynamics</li>
+<li>Heat Transfer</li>
+<li>Fluid mechanics</li>
+<li>Strength of Materials</li>
+<li>UPSC ESE ME</li>
+<li>Manufacturing Engineering</li>
+<li>Engineering Design</li>
+<li>Mechanics</li>
+<li>Analytical Reasoning</li>
+<li>Industrial engineering</li>
+<li>Automotive technology</li>
+<li>Technology</li>
+</ul> 
+</div>
+ 

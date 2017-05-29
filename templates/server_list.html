@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+<div style="float:left;align:center">
+{% block title %}Login{% endblock %}
+{% block content %}
+
+</ul> 
+
+<button onclick="location.href='{% url "server_new" %}'"style="background-color:red;color:white;padding:20px"> +Post</button>
+<div style="float:right;align:center">
+{% for server in object_list %}
+<ul >
+    
+	
+    <li>{{ server.title }} </li>
+    <li>{{ server.content|safe}} </li> 	
+   <li> {{ server.category }} </li>  
+   <li><img src="media/{{server.Image}}" width="550" height="300"></li>
+ 
+    
+	</ul>
+    {% endfor %}
+</div>	
+</div>
+<button onclick="location.href='{% url "server_new1" %}'"style="background-color:blue;color:white;padding:10px">Articles</button>
+<button onclick="location.href='{% url "server_new2" %}'" style="background-color:green;color:white;padding:10px">Update Articles</button>
+<div style="float:right;background-color:blue">
+<h2>A Platform for Inquisitive Ones</h2>
+<ul>
+<li>GATE Preparation</li>
+<li>Thermodynamics</li>
+<li>Heat Transfer</li>
+<li>Fluid mechanics</li>
+<li>Strength of Materials</li>
+<li>UPSC ESE ME</li>
+<li>Manufacturing Engineering</li>
+<li>Engineering Design</li>
+<li>Mechanics</li>
+<li>Analytical Reasoning</li>
+<li>Industrial engineering</li>
+<li>Automotive technology</li>
+<li>Technology</li>
+</ul> 
+</div>
+ {% endblock %}

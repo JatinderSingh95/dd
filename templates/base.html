@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+
+<body style="background-color:#BCF6F9;">
+<head>
+<script src="{% static 'js/tinymce/tinymce.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/tinymce/custom.js' %}" ></script>
+  <meta charset="utf-8">
+  <title>{% block title %}Article Project{% endblock %}</title>
+  <style>
+ul{
+padding:10px 20px;
+font-size:20px;
+background-color:white;
+list-style:none;
+}
+
+
+div{
+height:100vh;
+
+
+}
+
+
+li{
+padding:4px 0;
+
+
+}
+#user_opts{
+position:absolute;
+top:15px;
+right:15px;
+
+
+}
+</style>
+
+</head>
+
+<body>
+  <header>
+    <h1>Article Project</h1>
+	<div id="user_opts">
+    {% if user.is_authenticated %}
+      Hi {{ user.username }}!
+      <a href="{% url 'logout' %}">logout</a>
+    {% else %}
+      <a href="{% url 'login' %}">login</a>
+    {% endif %}
+	</div>
+  </header>
+  <div style="float:left;text-align:center;width:50%">
+    {% block content %}
+    {% endblock %}
+  </div>
+  
+</body>
+</html>

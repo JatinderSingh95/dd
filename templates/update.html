@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}Login{% endblock %}
+{% block content %}
+<h1>Edit Articles</h1>
+<ul>
+    {% for server in object_list %}
+	     
+    <li><img src="media/{{server.Image}}" width="100"><br>
+	{{ server.title }} <br>
+     {{ server.content|safe}}<br>	
+     {{ server.category }}	 <br>
+	
+      
+    <a href="{% url "server_edit" server.id %}">{{ server.title }}    UPDATE</a>  <br>
+    <a href="{% url "server_delete" server.id %}">delete</a>
+	 <hr>
+    </li>
+    {% endfor %}
+</ul> 
+
+
+
+{% endblock %}

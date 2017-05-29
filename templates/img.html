@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+<div style="float:left;align:center">
+
+{% block content %}
+
+</ul> 
+<div style="float:right;align:center">
+{% for server in object_list %}
+<ul>
+    
+	
+    <li>{{ server.title }} </li>
+    <li>{{ server.content|safe}} </li> 	
+   <li> {{ server.category }} </li>  
+   <li><img src="media/{{server.Image}}" width="550" height="300"></li>
+ 
+    
+	</ul>
+    {% endfor %}
+</div>	
+</div>
+<div style="float:right;background-color:blue">
+<h2>A Platform for Inquisitive Ones</h2>
+<ul>
+<li>GATE Preparation</li>
+<li>Thermodynamics</li>
+<li>Heat Transfer</li>
+<li>Fluid mechanics</li>
+<li>Strength of Materials</li>
+<li>UPSC ESE ME</li>
+<li>Manufacturing Engineering</li>
+<li>Engineering Design</li>
+<li>Mechanics</li>
+<li>Analytical Reasoning</li>
+<li>Industrial engineering</li>
+<li>Automotive technology</li>
+<li>Technology</li>
+</ul> 
+</div>
+ {% endblock %}

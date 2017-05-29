@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+<div style="float:left;align:center">
+{% block title %}Login{% endblock %}
+{% block content %}
+
+</ul> 
+
+<button onclick="location.href='{% url "server_new" %}'"style="background-color:red;color:white;padding:10px"> +Post</button>
+
+<ul>
+    {% for server in object_list %}
+	<li>{{ server.author }} </li>
+    <li>{{ server.bio }} </li>
+    <li>{{ server.location }} </li>
+	<li>{{ server.birth_date }} </li>
+	
+	
+   <hr>
+    </li>
+    {% endfor %}
+</div>
+</div>
+ {% endblock %}

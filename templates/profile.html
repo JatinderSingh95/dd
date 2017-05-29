@@ -1,0 +1,35 @@
+<style>
+ul{
+padding:10px 20px;
+background-color:white;
+list-style:none;
+}
+
+
+div{
+height:100vh;
+
+
+}
+
+
+li{
+padding:4px 0;
+
+
+}
+
+
+
+</style>
+<body style="background-image:url('https://image.freepik.com/free-vector/grey-linen-texture-background_1053-253.jpg');">
+<div style="float:left">
+<form method="post">{% csrf_token %}
+    {{ form.as_p }}
+
+    <input type="submit" value="Submit" />
+	
+</form>
+
+<button onclick="location.href='{% url "server_lprofile1" %}'"style="background-color:blue;color:white">update</button>
+ 
